@@ -1,12 +1,11 @@
-import StopWatch from "./components/StopWatch";
-import Timer from "./components/Timer";
+import { createBrowserRouter, Outlet } from "react-router";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1>React Learning</h1>
-      <StopWatch />
-      <Timer />
+      <Header/>
+      <Outlet />
     </>
   );
 }

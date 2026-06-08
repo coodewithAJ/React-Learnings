@@ -1,11 +1,42 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import App from './App.jsx'
+import App from "./App.jsx";
+import DashBoard from "./components/DashBoard.jsx";
+import { createBrowserRouter } from "react-router-dom";
+import StopWatch from "./components/StopWatch.jsx";
+import { RouterProvider } from "react-router";
+import Timer from "./components/Timer.jsx";
+import AdminPage from "./components/AdminPage.jsx";
+import Protected from "./components/Protected.jsx";
 
-createRoot(document.getElementById('root')).render(
+let router = createBrowserRouter([
+  {
+    path: "/",
+    Component: App,
+    children: [
+      {
+        path: "/stopwatch",
+        Component: StopWatch,
+      },
+      {
+        path: "/timer",
+        Component: Timer,
+      },
+      {
+        path: "/admin/:name",
+        element: (
+          <Protected isAuthenticated={true}>
+            <AdminPage />
+          </Protected>
+        ),
+      },
+    ],
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-    
+    <RouterProvider router={router} />
   </StrictMode>,
-)
+);

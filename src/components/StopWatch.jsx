@@ -30,6 +30,7 @@ const StopWatch = () => {
 
   return (
     <div>
+        <h1>Stopwatch</h1>
       <h1>{timer}</h1>
       <button onClick={handleStart}>Start</button>
       <button onClick={handleStop}>Stop</button>
