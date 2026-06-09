@@ -11,6 +11,7 @@ import Timer from "./components/Timer.jsx";
 import AdminPage from "./components/AdminPage.jsx";
 import Protected from "./components/Protected.jsx";
 import Counter from "./components/Counter.jsx";
+import Form from "./components/Form.jsx";
 
 let router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ let router = createBrowserRouter([
       {
         path: "/counter",
         Component: Counter,
+      },
+        {
+        path: "/form",
+        Component: Form,
       },
       {
         path: "/admin/:name",

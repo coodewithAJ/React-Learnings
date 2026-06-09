@@ -25,6 +25,12 @@ function Header() {
           >
             Counter
           </Link>
+           <Link
+            to="/form"
+            className="rounded-xl border border-purple-500 px-5 py-2 text-sm font-semibold text-purple-400 transition-all duration-300 hover:bg-purple-500 hover:text-white hover:shadow-lg hover:shadow-purple-500/30"
+          >
+            Form
+          </Link>
         </nav>
       </div>
     </header>

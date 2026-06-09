@@ -5,7 +5,8 @@ import StopWatch from "./components/StopWatch";
 import Timer from "./components/Timer";
 import UserContext from "./context/UserContext";
 import Header from "./components/Header";
-import { Outlet } from "react-router-dom";
+import {  Outlet } from "react-router-dom";
+
 
 function App() {
   const [user, setUser] = useState({
@@ -16,9 +17,6 @@ function App() {
   return (
     <>
       <Header />
-
-
-
       <UserContext.Provider value={user}>
         <Outlet />
       </UserContext.Provider>
@@ -27,3 +25,6 @@ function App() {
 }
 
 export default App;
+
+
+
