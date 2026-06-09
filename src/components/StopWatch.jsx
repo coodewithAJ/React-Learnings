@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import UserContext from "../context/UserContext";
 
 const StopWatch = () => {
   const [timer, setTimer] = useState(0);
   const [start, setStart] = useState(false);
+  const userContext = useContext(UserContext)
 
   const handleStart = () => {
     setStart(true);
@@ -31,6 +33,7 @@ const StopWatch = () => {
   return (
     <div>
         <h1>Stopwatch</h1>
+        <h3>Hello {userContext?.name}</h3>
       <h1>{timer}</h1>
       <button onClick={handleStart}>Start</button>
       <button onClick={handleStop}>Stop</button>
