@@ -12,6 +12,7 @@ import AdminPage from "./components/AdminPage.jsx";
 import Protected from "./components/Protected.jsx";
 import Counter from "./components/Counter.jsx";
 import Form from "./components/Form.jsx";
+import UseMemo from "./components/UseMemo.jsx";
 
 let router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ let router = createBrowserRouter([
         {
         path: "/form",
         Component: Form,
+      },
+       {
+        path: "/usememo",
+        Component: UseMemo,
       },
       {
         path: "/admin/:name",
