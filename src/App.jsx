@@ -17,7 +17,7 @@ function App() {
     <>
       <Header />
 
-      <h1>This is home page</h1>
+
 
       <UserContext.Provider value={user}>
         <Outlet />
